@@ -5,12 +5,8 @@ const path = require("path")
 app.use(express.static("public"))
 const port = process.env.PORT;
 
-app.listen(port || 3000, () => {
-    if (port == undefined){
-        console.log('Servidor corriendo en el puerto ' + 3000)
-    } else {
-        console.log('Servidor corriendo en el puerto ' + port)
-    }
+app.listen(port || 3000, function() {
+    console.log("Servidor corriendo en el puerto 3000");
 });
 
 app.get('/', (req, res) => {
